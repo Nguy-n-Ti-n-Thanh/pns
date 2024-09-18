@@ -15,6 +15,7 @@
 #include <boost/align/aligned_allocator.hpp>
 template <typename T>
 using vec = std::vector<T, boost::alignment::aligned_allocator<T, 512>>;
+using namespace std;
 
 const int32_t MAX = std::numeric_limits<int32_t>::max() / 2;
 
@@ -188,7 +189,7 @@ print_solution(Graph& graph, bool flows)
 {
     long solution = 0;
     for (int32_t a = 0; a < graph.m; ++a) {
-        if (graph.costs[a] > 0) {
+        if (graph.costs[a] >= 0) {
             if (flows) {
                 std::cout
                     << "f"
