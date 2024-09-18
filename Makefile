@@ -1,7 +1,8 @@
 CXXFLAGS	+= -std=c++11 -Wall -Wextra -pedantic
 
 # CXXFLAGS	+= -g -Og
-CXXFLAGS	+= -O3
+#CXXFLAGS	+= -g -O3
+CXXFLAGS	+= -g
 
 BINS		= pns-seq pns-seq-avx2 pns-seq-avx512 pns-omp pns-omp-avx2 pns-omp-avx512
 
